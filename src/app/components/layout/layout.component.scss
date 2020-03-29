@@ -1,0 +1,78 @@
+
+.app{
+   display: flex;   
+}
+
+.tab{
+    flex:1;
+    flex-direction: column;  
+    border: 1px solid #bcb5bc59;
+    .nav{
+        border: 1px solid green;
+        writing-mode: vertical-rl;
+        // text-orientation: upright;
+        
+        text-align: center;
+        cursor: pointer;
+        align-items: stretch;
+        height : 31% ;  
+        background-color: #c8c3c43d;
+    }
+    :hover{
+        background-color: white;
+        border : none ;
+    }
+   }
+
+.menu{
+    flex:10;
+    .search{
+
+        input{
+            width: 90%;
+            border: none;
+        }
+    }
+    .sub-menu{
+        border: 1px solid grey;
+        .item{
+            color: blue;
+        }
+    }
+    ul{
+        padding : 0 ;
+        margin : 0 ;
+        padding-bottom: 15px;
+    }
+    li{
+        list-style: none;
+        padding: 5px 0 2px 10px;
+    }
+
+}
+
+.content{
+    flex:50;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    .router-box{
+        flex : 10;
+    }
+    .footer{
+        flex : 1 ;
+    }    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
