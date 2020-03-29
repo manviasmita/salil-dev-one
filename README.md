@@ -18,8 +18,7 @@
     # we will use *ngFor for both header, and nav selection 
 
 ## Steps to push code on git
-
-
+git 
 # created new repository 'salil-project' on github
 
 # deleted default .git folder from the project 
