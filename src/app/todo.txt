@@ -1,0 +1,6 @@
+#1 Create array of header and subheader 
+
+#2 Navigate to layout.html
+
+#3 Replace template with *ngFor 
+
