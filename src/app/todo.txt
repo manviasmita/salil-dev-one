@@ -4,3 +4,4 @@
 
 #3 Replace template with *ngFor 
 
+#4 Learning - ngClass
