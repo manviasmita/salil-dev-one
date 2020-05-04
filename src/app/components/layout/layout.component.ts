@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {items} from './item';
+
 
 @Component({
   selector: 'app-layout',
@@ -7,14 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  public columns: any[];
+  public hero : any[];
   showMenu : boolean = false ;
-
-  constructor() { }
+  
+  constructor() {
+     this.columns = items;     
+      console.log(this.columns);      
+    }
 
   ngOnInit() {
   }
-  show(){
-    this.showMenu= true ;
+  selectedSubHeader(){
+    alert('router name is captured , routing is pending');
+  }
+  show(key){
+    key.expand = !key.expand ;
+    console.log(this.columns);
+    
+    // this.showMenu= !this.showMenu ;
   }
   showNavAd(){
 

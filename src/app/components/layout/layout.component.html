@@ -9,36 +9,22 @@
         <div class="search">
             <input type="text" placeholder="enter text to search ...">
         </div>
-        <div class="sub-menu">
-            <span class="item" (click)="show()">System Initialization</span>
-        </div>
-        <ul *ngIf="showMenu">
-
-            <li>Enterprise</li>
-            <li>Communication Settings</li>
-            <li>System Display Settings</li>
-            <li>Country</li>
-            <li>State</li>
-            <li>Zip Code</li>
-            <li>Message</li>
-            <li>Document</li>
-            <li>Exit</li>
-        </ul>
-
-
-        <div>
-            <div style="border: 1px solid grey;">
-                <span style=" color: blue;">Application Setup</span>
-            </div>
-
-        </div>
-        <div>
-            <div style="border: 1px solid grey;">
-                <span style=" color: blue;">Finacial</span>
-            </div>
-
-        </div>
-
+        <div class="sub-menu" > 
+            <ng-container *ngFor='let key of columns'>
+                <div>
+                    <span class="item" (click)="show(key)">
+                        {{ key.header }}
+                    </span>
+                    <ul *ngIf="key.expand"  >
+                        <li *ngFor='let subheader of key.subHeader' (click)="selectedSubHeader()">{{subheader.label}}</li>
+                    </ul>
+                </div>
+                
+               
+               
+            </ng-container>
+           
+        </div>   
     </div>
     <div class="content">       
         <div class="router-box">
